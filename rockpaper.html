@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: white;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            height: 800px;
+            width: 1000px;
+            border: 2px solid black;
+            margin: 60px auto;
+            display: flex;
+            justify-content: space-between; /* Even spacing between elements */
+            align-items: center; /* Align items vertically */
+            background-color: blueviolet;
+        }
+
+        .rock, .paper, .scissor {
+            height: 300px;
+            width: 300px;
+            border: 2px solid black;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-size: cover; /*Ensure images fit correctly */
+            background-position: center;
+        }
+        .top-message {
+            position: absolute; /* Enables positioning relative to .container */
+            top: 100px; /* Distance from the top */
+            left: 50%; /* Centers horizontally */
+            transform: translateX(-50%); /* Adjusts to perfectly center */
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .rock {
+            background-image: url(rock2_400x400.png);
+        }
+
+        .paper {
+            background-image: url(paper2_300x300.png);
+        }
+
+        .scissor {
+            background-image: url(scissor2.png);
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <div class="container">
+        <div class="rock"></div>
+        <div class="paper">Paper</div>
+        <div class="scissor"></div>
+        <span class="top-message">Choose an option</span>
+    </div>
+    <script src="rockpaper.js"></script>
+</body>
+</html>
